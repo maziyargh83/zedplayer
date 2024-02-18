@@ -1,0 +1,16 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "files": [
+    "index.ts"
+  ],
+  "scripts": {
+    "clean": "git clean -xdf .turbo node_modules"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2",
+    "tailwindcss-animate": "^1.0.6"
+  }
+}
