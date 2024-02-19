@@ -27,6 +27,7 @@ out/
 build
 dist
 
+downloads
 
 # Debug
 npm-debug.log*
