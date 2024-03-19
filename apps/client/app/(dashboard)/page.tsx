@@ -1,44 +1,23 @@
-import path from "path";
-import fs from "fs";
-import { s3 } from "lib/s3/S3";
-import { Button } from "@repo/ui/src/components/ui/button";
+import { FileTextIcon } from "@radix-ui/react-icons";
+import { Card } from "components/card/card";
+import { CardFooter } from "components/card/cardFooter";
+import { Section } from "components/section/section";
+
 export default async function page() {
-  const cwd = process.cwd();
-  const downloadFolderPath = path.join(cwd, "../../downloads");
-
-  // const files = await fs.promises.readdir(downloadFolderPath);
-
-  const uploadFiles = async () => {
-    "use server";
-    try {
-      const res = s3.listBuckets().promise();
-      console.log(res);
-    } catch (error) {
-      console.log(error);
-    }
-    // for (const file of files) {
-    //   const filePath = path.join(downloadFolderPath, file);
-
-    //   const fileStream = fs.createReadStream(filePath);
-
-    //   const uploadParams = {
-    //     Bucket: process.env.BUCKET!,
-    //     Key: file,
-    //     Body: fileStream,
-    //   };
-
-    //   try {
-    //     const res = await s3.upload(uploadParams).promise();
-    //     console.log(res);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
-  };
-
   return (
-    <form action={uploadFiles}>
-      <Button type="submit">click</Button>
-    </form>
+    <div>
+      <Section showmore title="Folders">
+        <div className="flex space-x-3 overflow-x-auto">
+          <Card
+            icon={<FileTextIcon fill="#111" />}
+            title="Documents"
+            theme="bg-teal-100"
+            containerClassName="py-4"
+          >
+            <CardFooter />
+          </Card>
+        </div>
+      </Section>
+    </div>
   );
 }
