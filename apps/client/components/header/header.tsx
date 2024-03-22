@@ -1,6 +1,8 @@
 import { Profile } from "components/header/profile";
 import { Search } from "components/header/search";
 import { LinkNone1Icon } from "@radix-ui/react-icons";
+import { FiDownloadCloud } from "react-icons/fi";
+import Link from "next/link";
 export const Header = () => {
   return (
     <div className="p-4 flex items-center">
@@ -11,7 +13,10 @@ export const Header = () => {
       <div className="flex-1">
         <Search />
       </div>
-      <div className="flex-1 justify-end flex">
+      <div className="flex-1 justify-end flex items-center">
+        <Link href={"/downloads"}>
+          <FiDownloadCloud />
+        </Link>
         <Profile />
       </div>
     </div>

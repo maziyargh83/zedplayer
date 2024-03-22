@@ -11,14 +11,18 @@
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
     "@repo/ui": "workspace:*",
+    "@uidotdev/usehooks": "^2.4.1",
     "aws-sdk": "^2.1564.0",
+    "check-disk-space": "^3.4.0",
     "class-variance-authority": "^0.7.0",
     "framer-motion": "^11.0.12",
     "libaria2-ts": "^1.0.91",
+    "lowdb": "^7.0.1",
     "minio": "^7.1.3",
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
     "ws": "^8.16.0"
   },
   "devDependencies": {
