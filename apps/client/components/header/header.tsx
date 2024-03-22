@@ -14,7 +14,7 @@ export const Header = () => {
         <Search />
       </div>
       <div className="flex-1 justify-end flex items-center">
-        <Link href={"/downloads"}>
+        <Link href={"/queue"}>
           <FiDownloadCloud />
         </Link>
         <Profile />
